@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$EUID" -e 0 ]
+if [ "$EUID" -eq 0 ]
   then echo "Don't run this as root. It's not worth it."
   exit
 fi
@@ -16,7 +16,7 @@ git clone https://github.com/davidmchan/pyutils $HOME/pyutils
 
 # Install bashmarks
 mkdir -p $HOME/.local/bin/
-wget https://raw.githubusercontent.com/huyng/bashmarks/master/bashmarks.sh --directory-prefix=$HOME/.local/bin
+wget https://raw.githubusercontent.com/huyng/bashmarks/master/bashmarks.sh -O $HOME/.local/bin/bashmarks.sh
 
 # Enable colors in tmux
 echo "set -g default-terminal \"screen-256color\"" >> ~/.tmux.conf
@@ -35,6 +35,7 @@ if [[ ! -d ${HOME}/.vim/bundle/Vundle.vim ]]; then
     git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
 
+set -e
 cp -a vimrc $HOME/.vimrc
 vim +PluginInstall +qall
 chown -R $USER:$USER $HOME/.vim

@@ -101,3 +101,8 @@ au BufEnter *.cc set ft=cpp
 au FileType * set fo=tcql
 au FileType python setlocal completeopt-=preview
 set nofoldenable    " disable folding
+
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+  endif
+
