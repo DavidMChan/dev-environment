@@ -1,20 +1,28 @@
 # dev-environment
-This are config files and install scripts for a number of programs that I often use. It mostly sets up a python development environment with vim. At the moment it contains
-
-- .bashrc
-- .vimrc + ftplugin commands for vim
-- install script for vim8 (requires sudo - vim8 needed for asynchronous linting)
-
+This are config files and install scripts for a number of programs that I often use. It can be useful to have something like this to quickly provision a new computer.
 
 # Installed Bash Programs
+
+### Bashrc
+The Bashrc file that I use on all of my machines. **Highlights**: Git branch tracking on PS1, CUDA exports, python3 alias, bashmarks/pyutils.
 
 ### [Python Utilities (Custom)](https://github.com/davidmchan/pyutils)
 These are a bunch of python utilites that I find handy and have coded over the years.
 
-
 ### [Bashmarks](https://github.com/huyng/bashmarks)
 
 Bashmarks is a shell script that allows you to save and jump to commonly used directories. Now supports tab completion.
+
+# Environment Configuration
+
+### Git
+This installation script configures git with my username and email, along with setting the default editor to VIM and the credential helper to store.
+
+### Tmux
+Adds a fix for 256 bit colors in tmux.
+
+### Dircolors
+Changes the default for 777 permissions on a folder - this can often be green on green and when mounting a flash drive/fs without permissions, this can be a real PITA. 
 
 # Vim Plugins
 
