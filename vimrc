@@ -84,7 +84,7 @@ set backspace=2
 set number
 set mouse=a
 syntax on
-color dracula
+silent! color dracula
 
 set shiftwidth=4
 set tabstop=4

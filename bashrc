@@ -143,7 +143,7 @@ alias python='python3'
 pip() ( python3 -m pip "$@" )
 
 # Add python utilities to the python path
-export PYTHONPATH=$PYTHONPATH:$HOME/pyutils
+export PYTHONPATH=$PYTHONPATH:$HOME/.local/pyutils
 
 # Bashmarks
 source ~/.local/bin/bashmarks.sh
