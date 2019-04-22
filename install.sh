@@ -26,7 +26,7 @@ wget https://raw.githubusercontent.com/huyng/bashmarks/master/bashmarks.sh -O $H
 
 # Enable colors in tmux
 echo -n "Setting up TMUX colors: "
-echo "set -g default-terminal \"screen-256color\"" >> ~/.tmux.conf && echo "Done" || { echo 'Installing TMUX colors failed... Quitting.' ; exit 1; }
+printf "new -n WindowName bash --login\nset-option -sa terminal-overrides \",xterm*:Tc\"\n" >> ~/.tmux.conf && echo "Done" || { echo 'Installing TMUX colors failed... Quitting.' ; exit 1; }
 
 # Configure GIT
 echo -n "Configuring git: "
