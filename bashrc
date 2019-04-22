@@ -154,8 +154,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_HOME/lib64
 export PATH=$PATH:$CUDA_HOME/bin
 
 # VIM Color configuration
-if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-    export TERM=xterm-256color
-fi
-
-
+export TERM=xterm-256color
